@@ -1,0 +1,105 @@
+
+<?php
+
+
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yordas</title>
+</head>
+<body>
+<p>Hello World</p>
+
+<div class="searchform">
+    <form action="/search.php" method="post">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit" name="submitSearch">Submit</button>
+    </form>
+</div>
+
+<?php
+
+
+//$sql = "SELECT * FROM yordas.table2;";
+//$result = mysqli_query($conn, $sql);
+//$resultCheck = mysqli_num_rows($result);
+//
+//if ($resultCheck > 0 ){
+//    while ($row = mysqli_fetch_assoc($result)){
+//        echo $row['Substancename'];
+//
+//    }
+//}
+
+//foreach ($view->allDetails as $tableData){
+//
+//    echo $tableData->getECnumber();
+
+echo '<br>';
+echo '<H1>TABLE 100</H1>';
+echo '<br>';
+foreach ($view->all as $tablesData){
+
+    echo '';
+}
+echo '<br>';
+echo '<H1>TABLE 3</H1>';
+echo '<br>';
+foreach ($view->folder as $tablesData){
+
+    echo '<br>';
+    echo $tablesData->getSubstances();
+    echo '<br>';
+    echo $tablesData->getRelatedInformation();
+    echo '<br>';
+
+}
+echo '<br>';
+echo '<H1>TABLE 4</H1>';
+echo '<br>';
+
+foreach ($view->tab as $tabData){
+
+    echo '<br>';
+    echo $tabData->getSubstances();
+    echo '<br>';
+    echo $tabData->getRelatedInformation();
+    echo '<br>';
+
+}
+
+echo '<br>';
+echo '<H1>TABLE 2</H1>';
+echo '<br>';
+
+foreach ($view->allDetails as $tableData){
+
+
+    echo '<br>';
+    echo 'ID: ', $tableData->getSubstanceID();
+    echo '<br>';
+    echo 'EC Number: ' , $tableData->getECnumber();
+    echo '<br>';
+    echo 'CAS Number: ' , $tableData->getCASnumber();
+    echo '<br>';
+    echo 'Substance Name: ' , $tableData->getSubstancename();
+    echo '<br>';
+}
+
+
+
+
+
+?>
+
+</body>
+</html>
+
+
+
+
+
